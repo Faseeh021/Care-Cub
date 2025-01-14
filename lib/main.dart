@@ -1,15 +1,22 @@
+import 'package:carecub/UI/Splash%20screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'chat_page.dart';
-void main(){
-  runApp(const MyApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  Widget build(BuildContext context){
-    return const MaterialApp(
-        title: "Flutter App",
-        debugShowCheckedModeBanner: false,
-        home: ChatPage());
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Care Cub',
+      home: const SplashScreen(), // Use SplashScreen to manage initial navigation
+    );
   }
 }
