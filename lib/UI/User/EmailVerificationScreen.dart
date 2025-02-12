@@ -1,4 +1,3 @@
-import 'package:carecub/UI/User/ProfileScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 import 'package:carecub/UI/User/Login.dart';
 
-import 'BottomNavigationBar.dart';
+import '../BottomNavigationBar.dart';
 
 
 class EmailVerificationScreen extends StatefulWidget {
@@ -105,6 +104,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFFEBFF),
       body: Center(
         child: Padding(
           padding: EdgeInsets.all(20),

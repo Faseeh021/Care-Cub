@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'Doctor details.dart';
+import 'DayCareDetails.dart';
 
-class DoctorList extends StatelessWidget {
+class DayCarelisting extends StatelessWidget {
   final List<Map<String, String>> dayCareCenters = [
     {
-      'name': 'Dr. Ali',
+      'name': 'Little Stars DayCare',
       'location': 'Lake City Downtown',
-       'image': 'assets/images/doctor.jpg',
+      'image': 'assets/images/daycareCenter1.webp',
     },
     {
-      'name': 'Dr. Alyan',
+      'name': 'Happy Kids Care',
       'location': 'Green Town',
-      'image': 'assets/images/doctor.jpg',
+      'image': 'assets/images/daycareCenter3.webp',
     },
     {
-      'name': 'Dr. Usman',
+      'name': 'Bright Future DayCare',
       'location': 'City Housing',
-      'image': 'assets/images/doctor.jpg',
+      'image': 'assets/images/daycareCenter2.webp',
     },
     {
-      'name': 'Dr. Waqas',
+      'name': 'Tiny Tots Haven',
       'location': 'DHA',
-      'image': 'assets/images/doctor.jpg',
+      'image': 'assets/images/daycareCenter3.webp',
     },
     {
-      'name': 'Dr. Adnan',
+      'name': 'Sunny Smiles DayCare',
       'location': 'Bahria Town',
-      'image': 'assets/images/doctor.jpg',
+      'image': 'assets/images/daycareCenter1.webp',
     },
   ];
 
@@ -42,8 +42,10 @@ class DoctorList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFFEBFF),
       appBar: AppBar(
-        title: Text('Book Doctor`s Appontment'),
+        backgroundColor: Colors.deepOrange.shade500,
+        title: Text('DayCare Centers',style: TextStyle(color: Color(0xFFFFEBFF))),
       ),
       body: ListView.builder(
         itemCount: dayCareCenters.length,
@@ -75,7 +77,7 @@ class DoctorList extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DoctorDetail(
+                    builder: (context) => DayCareDetailScreen(
                       name: center['name']!,
                       location: center['location']!,
                     ),

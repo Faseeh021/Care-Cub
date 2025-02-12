@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 //import 'User/Login.dart';
-import 'User/BottomNavigationBar.dart';
+import 'BottomNavigationBar.dart';
 import 'WelcomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -43,12 +43,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: Image.asset('assets/images/Animation.gif'),
+      splash: Image.asset('assets/images/CareCub_Animation.gif'),
       splashIconSize: 2500,
       centered: true,
       nextScreen: nextScreen, // Dynamic next screen
       backgroundColor: Colors.red.shade300,
-      duration: 3500,
+      duration: 2800,
     );
   }
 }
